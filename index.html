@@ -1,15 +1,102 @@
-<!DOCTYPE html>
-        <head>
-            <title>Rahul Shah's Webpage</title>
-            
-        </head>
+<!DOCTYPE html>     <!--Programming language declaration -->
+<html lang="en"> <!-- User language -->
 
-        <body>
-            <h1>Coded Website</h1>
-            <p>Hello World!</p>
+<head>
+    <title>Home | Inkspire</title> <!-- Name of the web page -->
+    <link rel="stylesheet" href="style.css"> <!--Linking cascading stylesheet-->
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <!--HEADER -->
+    <header> <!-- Website name -->
+        <h1>Inkspire Photography</h1>
+    </header>
+
+    <!--NAVIGATION BAR -->
+    <nav class="topnavbar"> 
+        <div class="navbar"> <!-- div containing Navigation elements  -->
+        <ul class="navlist"> <!--elements are declared inside the <ul> tag as child elements <li>  -->
+            <li><a href="index.html">HOME</a></li> <!-- Each <li> tag is added with a <a> tag to direct users to appropriate pages  -->
+            <li class="dropdowngallery"> <a href="gallery.html">GALLERY</a> <!-- For example, <a> directs users to gallery.html upon click on "Gallery" defined within the nav bar. -->
+                <div class="gallerylist"> <!-- Drop-down div is nested within <li> element  -->    
+                    <a href="gallery.html#gallery1">WEDDINGS</a> <!-- Redirects users to Sub-category 1 (defined as ID "gallery1") in gallery.html -->                          
+                    <a href="gallery.html#gallery2">PORTFOLIO</a><!-- Redirects users to sub-category 2 (defined as ID "gallery2") in gallery.html -->
+                </div> <!-- Drop-down "gallerylist" <div> will only be visible upon hover by applying CSS hover property.  -->
+            </li>
+            <li><a href="services.html">SERVICES</a></li> <!--Redirects users to services.html  -->
+            <li><a href="contact.html">CONTACT</a></li><!-- Redirects users to contact.html -->
+            </ul> 
+        </div>
+    </nav>
+
+    <!--WELCOME BANNER -->
+    <div class="bannercontainer">
+        <div class="bannerimage">  <!-- Banner image that will be reduced of opacity using CSS (opacity 50%)-->
+            <img src="images/Artboard 34-20.jpg" alt="welcome banner">
+        </div>
+
+        <div class="bannertext"> <!-- Adding text that will be applied on top of bannerimage, the div above.  -->
+            <p>Celebrate your special day with us.</p>
+        </div>
+    </div>
+
+    <!-- Home Gallery -->
+    <section class="homegallery">
+    <h3>Best of 2023</h3>
+        <div class="homegallerygrid"> <!-- div used as FLEXBOX -->
+            <!--Images are added to "homegallerygrid" div using img tags.
+                Images used in this gallery are all of the same aspect ratio.  -->
+            <img src="images/img1.jpg" alt="image1">
+            <img src="images/img2.jpg" alt="image2">
+            <img src="images/img14.jpg" alt="image3">
+            <img src="images/img11.jpg" alt="image 4">
+            <img src="images/img10.jpg" alt="image1">
+            <img src="images/img15.jpg" alt="image2">
+            <img src="images/img13.jpg" alt="image3">
+            <img src="images/img12.jpg" alt="image 4">
+            <img src="images/img9.jpg" alt="image1">
+            <img src="images/img8.jpg" alt="image2">
+            <img src="images/img7.jpg" alt="image3">
+            <img src="images/img6.jpg" alt="image 4">
+            <img src="images/img5.jpg" alt="image3">
+            <img src="images/img4.jpg" alt="image1">
+            <img src="images/img3.jpg" alt="image2">
+        </div>    <!-- Flexbox ends -->
+        </section>    
+        <br>
+
+        <!-- FOOTER  -->
+        <footer>
+            <div class="footercontainer"> <!-- Main Footer Container  (Parent)-->
+                <div class="footerlogo"> <!-- Footer Child container 1 -->
+                    <ul>    
+                    <li>    <h2>Inkspire Photography</h2> </li>
+                    </ul>
+                </div>    
+                <div class="footernav"><ul> <!--Footer child container 2. Basic Navigation pages listed-->
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    </ul>               
+                </div>
+                
+                <div class="footaddress"> <!--Footer child container 3  --> 
+                    <!-- Mailing address of client  -->
+                        <!-- <ul> is more convenient in this footer scenario over the regular <p> tag as this
+                                offers-->
+                    <ul><li>IV, The Source</li> 
+                    <li>BG Street</li>
+                    <li>Vypin, Kochi</li>
+                    <li>EKM 682503</li>
+                    <li>+44 77419 81090</li>
+                    </ul>
+                </div>
+                
+        
+            </div><!-- Main Footercontainer close here-->
+               
+        </footer>
         </body>
-
-
-
-
-</html>
+        </html>

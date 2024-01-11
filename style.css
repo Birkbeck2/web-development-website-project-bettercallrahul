@@ -1,0 +1,464 @@
+*{
+margin: 0; /* All elements by default will not have margins    */
+padding: 0; /* All elements by default will not have padding   */
+box-sizing: border-box; /* To have control over width and height of elements */
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
+/*________________HOMEPAGE ________________________*/
+/*HEADER*/
+header{
+    background-color: rgb(11, 11, 11);  /* applies background color  */
+    padding: 2px;   /* padding for the header */
+    justify-content: center; /* Centre alignment */
+    text-align: center;
+    
+}   
+header h1 { /* Heading styling for colour, alignment and padding */
+    color: rgb(255, 255, 255);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: center;
+}
+
+/*NAVIGATION BAR*/
+.topnavbar { 
+    
+    background-color: rgb(39, 39, 39);
+    z-index: 4; /* keeps .topnavbar on the highest Z-index assigned in this website (4)
+                Highest z-index number will allow the element to stay on top, above all other elements. */
+    position: sticky; /* Allows the nav bar to stick the top even when it is scrolled past */
+    top: 0; /* the sticking position is set to top:0; meaning, no space will be left from the top and the element sticks to the top most part of the viewport  */
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.navbar {
+    display: flex; /*child elements flex and form row */
+}
+
+.topnavbar a { /* navigation bar anchor tag style */
+
+    display: block;
+    color: white;
+    font-size: small;
+    text-decoration: none;
+}   
+
+.topnavbar a:hover { /* navigation bar interaction upon hover */
+    background-color: rgb(63, 63, 63);
+    
+}
+
+.navlist {  
+    display: flex; /* all the <li> elements within this unordered list class flexes in row */
+    list-style-type: none; /* the default decoration for list items are  removed (bullet points) */
+    justify-content:space-evenly;                   /*Justify content was used instead of regular padding so the nav bar elements maintains the set distance ratio across different devices */
+    width: 100%;                                    /*Navlist takes up 100% width of the viewport */
+    
+}
+
+.gallerylist {          /*This list is set to invisible by default */
+    display: none;      /* hides the div in normal state */
+    position: absolute;  /* sets the position to absolute  */
+    background-color: rgb(39, 39, 39);;
+    min-width: 160px;
+   z-index: 2;      /* z-index is higher than 1. this div will be displayed above all other elements. Only exceptions are elements that have been assigned a higher z-index. */
+}
+
+.dropdowngallery:hover .gallerylist {
+    display: block; /* upon hover on top of .dropdowngallery, the div .gallerylist will be displaye - giving two options for users. */
+}       
+
+/*BANNER*/
+
+.bannercontainer {          /* Style for the banner container */
+    position: relative;     /* Sets the position to relative for absolute positioning of text */
+    text-align: center;     /* Center-align the text */
+}
+
+
+.bannerimage img {          /* Style for the banner image */
+    width: 100%;            /* Makes the image take up the full width of the parent element */
+    height: auto;           /* Maintains the image's aspect ratio */
+    opacity: 70%;           /* reduces opacity of the banner image - this helps increase the visibilty of .bannertext elements. In this case, the website greeting.  */
+}
+.bannertext {
+    position: absolute;     /* position is set absolute with respect to it's parent element */
+    top: 50%;               /* positioning with respect to parent element */
+    left: 50%;
+    transform: translate(-50%, -50%); /* centres the div */
+	font-size:large;        /* font styling  */
+	font-weight: bold;
+	color: #fff;
+	text-align: center;     /* positioning text to the centre  */
+  }
+
+
+/*HOMEPAGE_GALLERY*/
+.homegallery h3{   /* aligning the heading to the centre  */
+    text-align: center;  
+    padding: 5px;
+}
+.homegallerygrid{
+display: flex;      /* all images inside the div are flexing  */
+flex-wrap: wrap;    /* wrapping allows the overflowing elements to wrap and fall in the next line and eliminates the horizontal scroll bar  */
+justify-content: center; /* the container's content are centred  */
+	
+}
+.homegallerygrid img{
+    width: 19.5%; /* This width dictates how many columns will be formed. in this case, 5 columns will be the result.  */
+                    /*  5 columns will appear by default (screens of 901 pixels or above) */
+    padding: 1px;
+	
+    
+}
+
+
+footer
+	{
+
+	/*	Inserting background image : https://www.w3schools.com/css/css3_backgrounds.asp*/
+		background-image: url("images/Artboard 40-20.jpg");  /* foter background added through stylesheet.   */
+ 		background-size: cover;        
+		background-repeat: no-repeat; /*background set to not repeat to have just one large image instead of repitition  */
+		height: 260px; 
+		text-align: left; /* aligns the text to the left */
+		color: white;
+		
+
+	}
+
+footer .footercontainer /* contains all elements of footer  */
+{
+	padding-top:40px;
+    display: flex; /* all child elements of footer flex  */
+    justify-content: space-evenly; /* spacing is evened out and looks neat  */
+    
+}
+
+footer ul li a
+{   /* anchor tags styling */
+	text-decoration:none;
+	color:white;cursor: pointer; /* changes the cursor to pointer  */
+	text-align: left;
+    font-size: small;
+}
+footer ul li a:hover
+{
+	color: gold; /* changing color upon hover */
+}
+footer ul  /* unordered list elements (footer) styling  */
+{ 
+    list-style:none; /* removes bullet points  */
+	padding:0;
+    font-size: small;
+}
+
+
+footer ul li
+{
+	
+	line-height: 24px; /* spaces between lines of .li elemets */
+	
+}
+
+/*media quiery that makes the webpage responsive to screens of widths between 420px & 600px  */
+@media (min-width: 420px) and (max-width:600px) /* HOME PAGE - MOBILE DEVICES__ */                        /*MOBILE SCREEN*/
+    {
+        .homegallerygrid
+            {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            }
+            .homegallerygrid img{
+                width: 49.5%; 
+                height:fit-content;
+                padding: 1px;
+                
+            }  
+            .bannertext {
+               
+                font-size: 26px;
+               
+              }
+
+
+    }
+    
+    
+ /*media quiery that makes the wepage responsive to screens of width between 601px - 900px  */   
+    
+@media (min-width: 601px) and (max-width: 900px)    /* HOME-PAGE TABLET SCREEN */
+     
+    {
+        .homegallerygrid
+        {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+        .homegallerygrid img{
+            width: 32.5%; 
+            height:fit-content;
+            padding: 1px;
+            
+        }
+    }
+
+
+/*SERVICES PAGE_______*/
+#services { /* positioning */
+    position: relative;
+}
+
+#services h3{ /* font styling */
+    font-size: larger;
+    padding: 10px;
+    padding-top: 20px;
+    position: absolute;
+    top: 10px;
+    
+}
+
+.servicesgrid{
+    display: grid; /* displays grid */
+    grid-template-columns: repeat(3,1fr); /* displays child elements in 3 columns */
+    
+    align-items: end; /* all child elements sink to the bottom of the container. This is to achieve a design tactic, where the container looks like a bar graph and to make the diamond package appear more valuable in terms of service benefits  */
+    padding: 20px;
+    
+}
+
+.goldpack{ 
+    background-color: rgb(234, 234, 234);
+    padding: 10px;
+    
+    width: 90%;
+    border-radius: 5px;
+}
+.platinumpack{
+    background-color: rgb(237, 237, 237);
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+}
+.diamondpack{
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+}
+.price{
+    margin-top: 5px;
+    background-color: gold;
+    border-radius: 3px;
+  
+  
+}
+
+.servicenote{
+    text-align: center;
+    padding: 5px;
+    background-color: blanchedalmond;
+}
+.servicenote p{
+    font-size: smaller; /* additional note in small text size related to pricing. */
+}
+
+
+
+/*_______________________GALLERY PAGE_____________*/
+#gallery1
+{
+    width: 100%;
+    margin:auto; /*centralizes the element*/
+    
+}
+
+.sectionheading h2{ 
+padding: 10px;
+}
+
+.photosection{ /* Section contains 4 child elements (.photocolumn) */
+    display: flex; /*  Child elements are flexed to form one row of 4 child elements*/
+    justify-content: center;
+    flex-wrap: wrap; /* wrap will be applied for smartphone and tablet screens according to the width adjustments that will be done for child elements as per requirement in tablet and smartphone screen widths */
+}
+.photocolumn { /* All 4 photocolumn elements are styled together   */
+display: flex; /* applied flex */
+flex-direction: column; /* turns the flex direction to column, making 4 columns  */
+width: 24.7%; /* defines the width of each column. Each column here takes 24.7%, resulting in four vertical columns to fall in place of the viewport.
+                This value will be changed according to varrying screen sizes to reduce the number of rows.  */
+padding-left: 2px;
+padding-right: 2px;
+
+}
+
+.photo{
+width: 100%; /* takes up the entire width of it's parent element, which is one column out of the total four columns */
+box-sizing: border-box;
+}
+
+.photo img{
+    width: 100%; /* image wide as parent container  */
+    height: auto;
+}
+.sttbutton{ /* the scroll to top button styling  */
+    text-align: center;
+    background-color:  rgb(11, 11, 11);
+    padding: 15px;
+  }
+
+  .sttbutton a{
+    color: white ;
+    padding: 15px;
+}
+
+.sttbutton a:hover {
+    color: gold;
+}
+
+@media (min-width: 420px) and (max-width:600px)                         /*MOBILE SCREEN*/
+/* GALLERY PAGE MEDIA QUERIES FOR SMARTPHONES*/ 
+{
+        .photocolumn {
+            
+            width:95%; /* Makes the .photocolumn div take up 95% of it's parent element.
+            This means that only one column can fit, the remaining .photocolumns will appear below as the user scrolls down.
+            This makes the layout responsive.  */
+    }
+    
+}
+    
+    
+@media (min-width: 601px) and (max-width: 900px)                        /* TABLET SCREEN */
+/*GALLERY PAGE FOR TABLETS  */     
+{
+
+.photocolumn {
+        width: 49.5%; /* makes the .photocolumn div take up 49.5% of it's parent container.
+        This results in two columns on the viewport, and the the remaining two columns appears below.
+        This makes the layout responsive  */
+    
+    }
+}
+/*_______CONTACTPAGE________ */
+
+.banner
+{
+    position: relative;
+}
+.banner, .banner img
+{
+	width:100%;
+    display: block;
+	
+}
+.banner:after
+{
+	clear: both;
+	display: block;
+	content: "";
+	
+}
+.bannerthree h2
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,50%);
+	font-size: large;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+}
+
+/* CONTACT FORM  */
+/* referenced from https://www.w3schools.com/howto/howto_css_contact_form.asp */
+{font-family: Arial, Helvetica, sans-serif;} /* Font family for contact form */
+
+
+/*styling for text input fields    */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  /*styling for email input fields    */
+  input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+ /*styling for submit button   */
+  input[type=submit] {
+    background-color:  rgb(11, 11, 11);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover { /* styling for submit button on hover  */
+    background-color:gold;
+  }
+  
+  .contactform{ /* styling for .contactform , the parent element containing the input form. */
+    justify-content: center; 
+    width: 100%;
+  }
+
+  .contactform h3{ /* alignment for heading  */
+    text-align: center;
+    padding: 15px;
+  }
+  .formcontainer { /* styling for .formcontainer, the input form  */
+    border-radius: 5px;
+    margin-left: auto; /* margin left and margin right on auto sets the div at the centre of it's parent element */
+    margin-right: auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 65%;  /* width is set to 65% to leave blank space   */
+  }
+  
+        @media (min-width: 420px) and (max-width:600px)                         /*MOBILE SCREEN*/
+/* MEDIA QUERIES FOR SMARTPHONES*/ 
+{
+    .formcontainer { /* Form container takes up 95% of the viewport and maximises screen usage  */
+        width: 95%;
+      }
+      
+    
+}
+    
+    
+@media (min-width: 601px) and (max-width: 900px)       /* TABLET SCREEN */
+/*QUERIES FOR TABLETS  */     
+{
+    .formcontainer {
+        width: 75%; /* considerably less blank spaces on the sides compared to desktop screen width view. */
+      }
+     
+}
+            
+
+
+
+

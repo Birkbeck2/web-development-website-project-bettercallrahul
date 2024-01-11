@@ -1,0 +1,209 @@
+<!DOCTYPE html>     <!--Programming language declaration -->
+<html lang="en"> <!-- User language -->
+
+<head>
+    <title>Gallery | Inkspire</title>  <!-- Name of the web page -->
+    <link rel="stylesheet" href="style.css"> <!--Linking cascading stylesheet-->
+    <meta charset="utf-8">
+</head>
+
+<body> <!-- Opened Body tag-->  
+    <!--All visible elements are declared within body tag -->
+
+    <!--HEADER -->
+    <header> <!-- Website name with stylized font-->
+        <h1>Inkspire Photography</h1>
+    </header>
+
+    <nav class="topnavbar">   
+        <div class="navbar">
+        <ul class="navlist">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdowngallery"> <a href="gallery.html">GALLERY</a>
+                <div class="gallerylist">    
+                    <a href="gallery.html#gallery1">WEDDINGS</a>                           
+                    <a href="gallery.html#gallery2">PORTFOLIO</a>
+                </div>
+            </li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            </ul> 
+        </div>
+    </nav>
+
+    
+
+    <section id="gallery1"> <!-- Gallery for wedding photos - parent container of first gallery-->
+        <div class="sectionheading"> <!--heading container -->
+            <h2>Weddings</h2>
+        </div>
+    <div class="photosection"> <!-- Container class holding 4 child elements (columns)  -->
+        <!--Each column has the same class name and holds four child divs -->
+       <div class="photocolumn"> <!-- Column #1 -->
+            <div class="photo"> <!-- div acts as image holder-->
+            <img src="images/Artboard 27-20.jpg" alt="sd"> <!-- image placed inside the image holder defined as .photo-->
+            </div>
+            <div class="photo"> <!-- image holder -->
+                <img src="images/Artboard 4-20.jpg" alt="sdf">
+            </div>
+            <div class="photo"> <!-- image holder-->
+                <img src="images/Artboard 11-20.jpg" alt="s">
+            </div>
+            <div class="photo"> <!-- image holder-->
+                <img src="images/Artboard 28-20.jpg" alt="sd">
+            </div>
+        </div>      <!-- first column ends-->
+
+        <div class="photocolumn"> <!-- column #2  following the same pattern as above - One parent div containing four image holding divs that holds one image each.-->
+            <div class="photo">
+                <img src="images/Artboard 24-20.jpg" alt="sdf">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 25-20.jpg" alt="s">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 34-20.jpg" alt="sd">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 27-20.jpg" alt="sd">
+            </div>
+        </div>
+        <div class="photocolumn"> <!-- column #3 -->
+            <div class="photo">
+                <img src="images/Artboard 32-20.jpg" alt="s">
+            </div>
+            
+             <div class="photo">
+                <img src="images/Artboard 26-20.jpg" alt="sd">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 11-20.jpg" alt="sd">
+            </div>
+        </div>
+        <div class="photocolumn"> <!-- column #4-->
+            <div class="photo">
+            <img src="images/Artboard 4-20.jpg" alt="sd">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 11-20.jpg" alt="sdf">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 32-20.jpg" alt="s">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 13-20.jpg" alt="sd">
+            </div>
+        </div>
+        <!--  column #4 defined and closed-->
+    </div>  <!-- parent div .photosection closed -->
+    </section> <!-- First gallery closed -->
+
+    <section id="gallery2"> <!--second gallery (for portfolio images / portraits) -->
+            <!-- Second gallery follows the exact same structure and class names as the
+                 first gallery defined as ID #gallery1. The only difference is that both 
+                 are two different IDs. This is done to achieve automatic scroll to
+                  the specific gallery (Gallery 1 or Gallery 2) -->
+        <div class="sectionheading">
+            <h2>Portfolio</h2>
+        </div>
+    <div class="photosection">
+       
+        <div class="photocolumn">
+            <div class="photo">
+                <img src="images/Artboard 12-20.jpg" alt="s">
+            </div>
+            
+             <div class="photo">
+                <img src="images/Artboard 3-20.jpg" alt="sd">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 35-20.jpg" alt="sd">
+            </div>
+        </div>
+        
+        <div class="photocolumn">
+            <div class="photo">
+            <img src="images/Artboard 10-20.jpg" alt="sd">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 16-20.jpg" alt="sdf">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 23-20.jpg" alt="s">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 30-20.jpg" alt="sd">
+            </div>
+        </div>
+
+        <div class="photocolumn">
+            <div class="photo">
+                <img src="images/Artboard 15-20.jpg" alt="sdf">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 18-20.jpg" alt="s">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 19-20.jpg" alt="sd">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 22-20.jpg" alt="sd">
+            </div>
+        </div>
+        <div class="photocolumn">
+            <div class="photo">
+                <img src="images/Artboard 21-20.jpg" alt="s">
+            </div>
+            
+             <div class="photo">
+                <img src="images/Artboard 20-20.jpg" alt="sd">
+            </div>
+            <div class="photo">
+                <img src="images/Artboard 40-20.jpg" alt="sd">
+            </div>
+        </div>
+    </div>
+
+
+    </section>
+    <!-- Gallery 2 section defined and closed-->
+    <!-- Both galleries will have 4,2 and one column on desktops, tablets and smartphones respectively.-->
+    
+
+    <!-- SCROLL TO TOP BUTTON-->
+    <div class="sttbutton"> <!-- defined the  button in a div, with background color applied-->
+    <a href="#gallery1">Scroll to top</a> <!-- scrolls up to the first gallery of the page-->
+    </div>    
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footercontainer">
+            <div class="footerlogo"><ul>
+                <li><h2>Inkspire Photography</h2></li>
+                </ul>
+            </div>    
+            <div class="footernav"><ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            
+            <div class="footaddress">
+                <ul><li>IV, The Source</li>
+                <li>BG Street</li>
+                <li>Vypin, Kochi</li>
+                <li>EKM 682503</li>
+                <li>+44 77419 81090</li>
+                </ul>
+            </div>
+            
+    
+        </div><!-- Footer container close here-->
+           
+    </footer>
+
+</body>
+</html>

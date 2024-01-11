@@ -1,0 +1,103 @@
+<!DOCTYPE html>     <!--Programming language declaration -->
+<html lang="en"> <!-- User language -->
+
+<head>
+    <title>Contact | Inkspire</title> <!-- Name of the web page -->
+    <link rel="stylesheet" href="style.css"> <!--Linking cascading stylesheet-->
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<!--HEADER -->
+    <header> <!-- Website name with stylized font-->
+        <h1>Inkspire Photography</h1>
+    </header>
+
+    <!--NAVIGATION BAR -->
+	<nav class="topnavbar">
+		
+        <div class="navbar">
+        <ul class="navlist">
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdowngallery"> <a href="gallery.html">GALLERY</a>
+                <div class="gallerylist">    
+                    <a href="gallery.html#gallery1">WEDDINGS</a>                           
+                    <a href="gallery.html#gallery2">PORTFOLIO</a>
+                </div>
+            </li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            </ul> 
+        </div>
+    </nav>
+	
+   
+<!-- CONTACT BANNER SECTION  -->
+<section class="banner">
+	<img src="images/Artboard 28-20.jpg" alt="welcome banner">
+
+	<div class="overlay">
+	</div>
+			
+	<div class="bannerthree">
+	<h2> GET IN TOUCH</h2>
+</div>
+</section>
+
+
+<!-- CONTACT FORM  -->	
+<!-- referenced from https://www.w3schools.com/howto/howto_css_contact_form.asp-->
+<section class="contactform">
+<h3>Contact Form</h3>
+<div class="formcontainer">
+	<form action="/contactform.php">
+	  <label for="fname">First Name</label>
+	  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+	  <label for="emailaddress">E-Mail</label>
+	  <input type="email" id="emailaddress" name="emailaddress" placeholder="Your e-mail..">
+  
+	  
+  
+	  <label for="subject">Subject</label>
+	  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+	  <input type="submit" value="Submit">
+	</form>
+</div>
+</section>
+
+
+
+<!-- FOOTER SECTION  -->
+<footer>
+	<div class="footercontainer">
+		<div class="footerlogo"><ul>
+			<li><h2>Inkspire Photography</h2></li>
+			</ul>
+		</div>    
+		<div class="footernav"><ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="gallery.html">GALLERY</a></li>
+			<li><a href="index.html#services">SERVICES</a></li>
+			<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+		
+		<div class="footaddress">
+			<ul><li>IV, The Source</li>
+			<li>BG Street</li>
+			<li>Vypin, Kochi</li>
+			<li>EKM 682503</li>
+			<li>+44 77419 81090</li>
+			</ul>
+		</div>
+		
+
+	</div><!-- Footer container close here-->
+	   
+</footer>
+	
+</body>
+</html>
