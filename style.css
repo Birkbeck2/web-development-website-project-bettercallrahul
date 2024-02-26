@@ -166,9 +166,11 @@ footer ul li
 }
 
 .finimage {
- width: 70%;
 justify-content: center;
 }
+
+.finimage img{
+width: 70%;}
 
 .referenceimage {
 justify-content: center;}
