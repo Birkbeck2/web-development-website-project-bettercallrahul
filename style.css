@@ -165,6 +165,21 @@ footer ul li
 	
 }
 
+.finimage {
+ width: 70%;
+justify-content: center;
+}
+
+.referenceimage {
+justify-content: center;}
+
+.referenceimage img { 
+	width: 32%;
+}
+
+
+
+
 /*media quiery that makes the webpage responsive to screens of widths between 420px & 600px  */
 @media (min-width: 420px) and (max-width:600px) /* HOME PAGE - MOBILE DEVICES__ */                        /*MOBILE SCREEN*/
     {
