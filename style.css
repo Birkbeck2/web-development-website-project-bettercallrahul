@@ -164,16 +164,20 @@ footer ul li
 	line-height: 24px; /* spaces between lines of .li elemets */
 	
 }
-
+.manipacontainer{
+padding:5px;
+}
 .finimage {
 justify-content: center;
+	align-items:centre;
 }
 
 .finimage img{
 width: 70%;}
 
 .referenceimage {
-justify-content: center;}
+justify-content: center;
+padding:10px;}
 
 .referenceimage img { 
 	width: 32%;
